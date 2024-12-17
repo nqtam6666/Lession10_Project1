@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\nqtNhaCCControllder;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/ListNhaCC', [nqtNhaCCControllder::class, 'list'])->name('nqtamNcc.list');
